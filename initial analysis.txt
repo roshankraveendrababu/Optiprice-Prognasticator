@@ -1,0 +1,16 @@
+brent oil - 17/6/2022- 4/1/2000
+crude oil - 4/1/2000 - 17/6/2022
+natural gas - 4/1/2000 - 17/6/2022
+heating oil -4/1/2000 - 17/6/2022
+
+ExxonMobil 
+Chevron 
+ConocoPhillips 
+Marathon Petroleum
+
+
+STARTING OF EACH COMMODITY- 
+Brent Oil -A2
+Crude Oil WTI -A5770
+Natural Gas - A11514
+Heating Oil - A17256

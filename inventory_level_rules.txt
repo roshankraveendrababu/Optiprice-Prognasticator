@@ -1,0 +1,64 @@
+Here are some **rules for adjusting prices based on inventory levels** in your pricing model:
+
+---
+
+### **1. Inventory-Based Pricing Rules**
+#### **🔹 High Stock (Abundant Inventory)**
+- If **stock > 80%** of capacity → **Reduce price** slightly to increase sales.
+- If **stock is increasing faster than sales** → **Offer discounts** or promotions to clear excess inventory.
+
+#### **🔹 Moderate Stock (Balanced Inventory)**
+- If **stock is between 40% - 80%** → Keep the price **stable** (base price).
+- Adjust prices based on **competitor pricing** and **demand trends**.
+
+#### **🔹 Low Stock (Limited Inventory)**
+- If **stock < 40%** → **Gradually increase price** to improve margins.
+- If **stock is depleting too fast** → Apply a **surge pricing strategy** (price hikes).
+
+#### **🔹 Critical Stock (Very Low or Out of Stock)**
+- If **stock < 10%** → **Significantly increase price** to slow down sales.
+- If **stock = 0** → **Show “Out of Stock”** instead of setting an extremely high price.
+
+---
+
+### **2. Dynamic Adjustments with Other Factors**
+- **Competitor Prices**: Adjust prices dynamically if competitors lower or raise their prices.
+- **Demand Fluctuations**: Increase prices if demand is high, even if stock is moderate.
+- **Seasonality & Trends**: Lower prices during low-demand seasons, increase during peak periods.
+- **Production & Restocking Time**: If new stock is arriving soon, avoid raising prices too much.
+
+---
+
+### **3. Example of a Pricing Formula**
+A simple formula could be:
+
+\[
+\text{New Price} = \text{Base Price} \times (1 + \alpha \times \text{Stock Level Factor})
+\]
+
+Where:  
+- **Stock Level Factor** = \(1 - \frac{\text{Current Stock}}{\text{Max Stock}}\)  
+- **α (Adjustment Rate)** = A constant that defines how much price should change based on stock.
+
+The **adjustment rate (α)** depends on how aggressively you want prices to change with inventory levels. Here are some recommended values based on different strategies:
+
+### **Suggested Values for α**  
+| **Strategy**          | **Adjustment Rate (α)** | **Effect** |
+|----------------------|--------------------|-------------|
+| **Conservative**    | **0.05 - 0.10**    | Small price changes, minimal impact on revenue. |
+| **Moderate**        | **0.15 - 0.25**    | Balanced pricing adjustments, good for most businesses. |
+| **Aggressive**      | **0.30 - 0.50**    | Large price swings, best for highly perishable or volatile inventory. |
+
+#### **Example Calculation (Moderate Strategy, α = 0.2)**
+If:  
+- **Base Price** = $100  
+- **Current Stock** = 30 units  
+- **Max Stock** = 100 units  
+
+Then,  
+\[
+\text{Stock Level Factor} = 1 - \frac{30}{100} = 0.7
+\]
+\[
+\text{New Price} = 100 \times (1 + 0.2 \times 0.7) = 100 \times 1.14 = \mathbf{\$114}
+\]
